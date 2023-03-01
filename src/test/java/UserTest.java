@@ -32,13 +32,13 @@ class UserTest {
     }
 
     @Test
-    public void shouldReturnErrorIfLoginIsNotCorrect() {
+    public void shouldReturnIllegalArgumentExceptionIfLoginIsNotCorrect() {
         User expected = new User();
         assertThrows(IllegalArgumentException.class, () -> expected.setLogin(Constant.EMPTY_LOGIN));
     }
 
     @Test
-    public void shouldReturnErrorIfLoginEqualsEmail() {
+    public void shouldReturnIllegalArgumentExceptionIfLoginEqualsEmail() {
         User expected = new User();
         expected.setEmail(Constant.CORRECT_EMAIL);
         assertThrows(IllegalArgumentException.class, () -> expected.setLogin(Constant.CORRECT_EMAIL));
