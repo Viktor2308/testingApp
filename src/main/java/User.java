@@ -8,8 +8,10 @@ public class User {
     }
 
     public User(String login, String email) {
-        setLogin(login);
-        setEmail(email);
+        if (!Objects.equals(login, email)) {
+            setLogin(login);
+            setEmail(email);
+        }
     }
 
     public String getLogin() {
