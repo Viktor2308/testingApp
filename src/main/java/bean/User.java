@@ -24,6 +24,8 @@ public class User {
         if (!Objects.equals(login, email)) {
             setLogin(login);
             setEmail(email);
+        } else {
+            throw new IllegalArgumentException("User is not correct");
         }
     }
 
@@ -32,6 +34,8 @@ public class User {
         if (!Objects.equals(login, email)) {
             setLogin(login);
             setEmail(email);
+        } else {
+            throw new IllegalArgumentException("User is not correct");
         }
     }
 

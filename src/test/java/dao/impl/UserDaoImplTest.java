@@ -15,9 +15,9 @@ class UserDaoImplTest {
 
     @Test
     void shouldReturnUserGetUserByName() {
-        User actual = new User("Nike", "NikeNike", "Nike_Nike@mail.com");
+        User expected = new User("Nike", "NikeNike", "Nike_Nike@mail.com");
 
-        User expected = out.getUserByName(ConstantDaoTest.CORRECT_NAME_NIKE);
+        User actual = out.getUserByName(ConstantDaoTest.CORRECT_NAME_NIKE);
 
         assertEquals(actual, expected);
 
@@ -26,9 +26,9 @@ class UserDaoImplTest {
     @Test
     void shouldReturnNullGetUserByName() {
 
-        User expected = out.getUserByName(ConstantDaoTest.NO_CORRECT_NAME);
+        User actual = out.getUserByName(ConstantDaoTest.NO_CORRECT_NAME);
 
-        assertNull(expected);
+        assertNull(actual);
 
     }
 
